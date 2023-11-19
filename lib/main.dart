@@ -36,15 +36,19 @@ class _FraudIDPageState extends State<FraudIDPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        SearchField(
-          hintText: "有疑慮的 Line ID",
-          controller: _textEditingController,
-          onChanged: (value) {},
+    return Scaffold(
+      body: SafeArea(
+        child: Column(
+          children: [
+            SearchField(
+              hintText: "有疑慮的 Line ID",
+              controller: _textEditingController,
+              onChanged: (value) {},
+            ),
+            const FraudLineIDSection(),
+          ],
         ),
-        const FraudLineIDSection(),
-      ],
+      ),
     );
   }
 }
